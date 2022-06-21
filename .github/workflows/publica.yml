@@ -22,7 +22,8 @@ jobs:
         run: |
           echo "OWNER=${GITHUB_REPOSITORY_OWNER,,}" >> ${GITHUB_ENV}
       - name: use OWNER
-        run: echo "Detinatorul repoului este: ${OWNER}"
+        run: |
+          echo "Detinatorul repoului este: ${OWNER}"
 
       - name: Setup Buildx
         uses: docker/setup-buildx-action@v1
